@@ -1,0 +1,8 @@
+<!-- В todos хранятся данные полученные из потока todos$ -->
+<div class="todos">
+    <ng-container *ngIf="todos$ | async as todos">
+        <ng-container *ngFor="let todo of todos">
+            <todo-item [todo]="todo"></todo-item>
+        </ng-container>
+    </ng-container>
+</div>
